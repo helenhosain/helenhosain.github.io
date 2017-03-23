@@ -1,0 +1,164 @@
+/* ----------------------------------------
+Base Styles
+------------------------------------------- */
+h1, h2, h3 {
+	font-family: 'Cormorant Garamond', serif;
+}
+
+h2,h3 {
+	text-transform: uppercase;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.show {
+	text-align: center;
+
+}
+
+/* ----------------------------------------
+Typography
+------------------------------------------- */
+h1 {
+	font-size: 60px;
+	line-height: 1em;
+	margin-bottom: 0px;
+}
+
+h2 {
+	font-size: 18px;
+	margin-bottom: 0px;
+}
+
+h3 {
+	font-size: 12px;
+}
+
+p {
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;	
+}
+
+/* ----------------------------------------
+Header
+------------------------------------------- */
+nav {
+	background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.header-media, .header-fashion, .header-events, .header-travel {
+	padding: 300px 20px 20px 20px;
+}
+
+.header-media {
+	background-color: #4C4C4C;	
+}
+
+.header-fashion {
+	background-color: #7F7F7F;
+}
+
+.header-events {
+	background-color: #999999;
+}
+
+.header-travel {
+	background-color: #CCCCCC;
+}
+
+/* ----------------------------------------
+List
+------------------------------------------- */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 20px;
+    overflow: hidden;
+    text-align: right;
+}
+
+li {
+	display: inline;
+	padding: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+a:link {
+	text-decoration: none;
+	color: black;
+}
+
+
+li a:hover {
+	color: #D0F2F5;
+}
+
+/* ----------------------------------------
+Layout
+------------------------------------------- */
+
+/* events */
+.events-container {
+	margin-top: 40px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-around;
+	
+}
+
+.event {
+	width: 18%;
+	background-color: red;
+}
+
+.title-image {
+	width: 18%;
+	background-color: blue;
+}
+
+.calendar {
+	background-color: green;
+	width: 58%;
+}
+
+
+/* films */
+.film-container {
+	margin-top: 40px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-around;	
+
+}
+
+.film {
+	background-color: #CCCCCC;
+	width: 23%;
+}
+
+
+/* ----------------------------------------
+Buttons
+------------------------------------------- */
+
+/* ----------------------------------------
+Footer
+------------------------------------------- */
+
