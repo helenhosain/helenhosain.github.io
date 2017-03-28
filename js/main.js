@@ -1,50 +1,23 @@
-// When the user submits the form
-$('form').on('submit', function (e) {
+// When the user mouseovers headline
+	// mouse enters the scene
+		// paragraph fades in and slides up
+	// mouse exits the scene
+		//paragraph fades out and slides down
 
-	// Prevent the page from refreshing
-	e.preventDefault();
 
+	
+// When the user clicks on one of the vertical hero images
+	// the vertical image expands to full cover display
+	
 
+	
 
-	var author = $('#authorSelect').val();
+// $ và jQuery là như nhau
 
-	var noun = $('#nounInput').val();
+$(function(){
+  $('.event-list').find('.event').click(function(){
+    $('.event-list').find('.openEv').removeClass('open');
+    $(this).next().toggleClass('open');
+  })
+})
 
-	var verb = $('#verbInput').val();
-		
-	if (author === "") {
-		$('#authorSelect').addClass('error');
-	} else {
-		$('#authorSelect').removeClass('error');
-	}
-
-	if (noun === "") {
-		$('#nounInput').addClass('error');
-	} else {
-		$('#nounInput').removeClass('error');
-	}
-
-	if (verb === "") {
-		$('#verbInput').addClass('error');
-	} else {
-		$('#verbInput').removeClass('error');
-	}
-
-	// Conditional here for BONUS task
-	if (author !== "" && noun !== "" && verb !== "") {
-
-		$('.quote').hide();
-
-		if (author === "suess") {
-			$('#suess').fadeIn(300);
-		} else {
-			$('#carroll').fadeIn(300);
-		}
-
-		$('.noun').text(noun);
-
-		$('.verb').text(verb);
-
-	}
-
-});
