@@ -12,12 +12,32 @@
 
 	
 
-// $ và jQuery là như nhau
+// $(function(){
+//   $('.event-list').find('.event').click(function(){
+//     $('.event-list').find('.openEv').removeClass('open');
+//     $(this).next().toggleClass('open');
+//   })
+// })
 
-$(function(){
-  $('.event-list').find('.event').click(function(){
-    $('.event-list').find('.openEv').removeClass('open');
-    $(this).next().toggleClass('open');
-  })
-})
 
+$('.event-container').on('click', function () {
+    // Type code related to event here! :)
+    $('.topbar-background').fadeIn(300);
+    $('.topbar-content').addClass('active');
+});
+
+
+$('.close-button').on('click', function () {
+    // Type code related to event here! :)
+    $('.topbar-background').fadeOut(300);
+    $('.topbar-content').removeClass('active');
+});
+
+
+//when user clicks on event-container
+//addClass active to topbar-content
+//topbar background fades in 85%
+
+//when user clicks close button
+//removeClass active to topbar
+//topbar background fades out
