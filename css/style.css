@@ -76,9 +76,9 @@ h4 {
 p {
 /*	padding-right: 30px;*/
 	margin-top: 0px;
-	font-size: 12px;
+	font-size: 14px;
 	font-family: 'Open Sans', sans-serif;
-	line-height: 18px;	
+	line-height: 22px;	
 }
 
 blockquote {
@@ -100,12 +100,12 @@ nav {
   text-transform: uppercase;
   font-size: 12px;
 
-  /* The MAGIC - Part 1 */
+  /* Part 1 */
 
   display: flex;
 }
 
-/* The MAGIC Part 2 - Select the *first* item you want to be on the right side */
+/* Part 2 - Select the *first* item you want to be on the right side */
 a:nth-of-type(2) {
   margin-left: auto;
 }
@@ -122,28 +122,63 @@ nav a {
 }
 
 .header-media, .header-style, .header-events, .header-travel {
-	padding: 350px 30px 50px 30px;
+	height: 624px;
 }
 
 .header-media {
+	width: 25%;
 	background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
                 rgba(0,0,0,0.55) url('../images/photo-header-media.jpg') no-repeat center;
 }
 
 .header-style {
+	width: 25%;
 	background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
                 rgba(0,0,0,0.55) url('../images/photo-header-style.jpeg') no-repeat center;
 }
 
 .header-events {
+	width: 25%;
 	background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
                 rgba(0,0,0,0.55) url('../images/photo-header-events.jpg') no-repeat center;
 }
 
 .header-travel {
+	width: 25%;
 	background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
                 rgba(0,0,0,0.55) url('../images/photo-header-travel.jpg') no-repeat center;
 }
+  
+.header-title {
+	padding: 300px 20px 0px 20px;
+	transition: all .4s ease-in-out;
+	transform: translateY(10%);
+} 
+
+.header-description {
+	padding: 0px 20px;
+	transition: all .4s ease-in-out;
+	transform: translateY(40%);
+	display: none;
+}
+
+.header-category {
+	padding: 0px 20px;
+	transform: translateY(30px);
+	transition: all .4s ease-in-out;
+
+}
+
+/*class for jQuery*/
+
+.title-up {
+	transform: translateY(0);
+}
+
+.category-down {
+	transform: translateY(40px);
+}
+
 
 /* ----------------------------------------
 List
@@ -189,7 +224,7 @@ Layout
 }
 
 .events-title {
-	padding: 40px 20px;
+	padding: 40px 40px;
 	width: 25%;
 	color: #f9f9f9;
 	background-color: #151515;
@@ -212,7 +247,7 @@ Layout
 }
 
 .media-title {
-	padding: 40px 20px;
+	padding: 40px 40px;
 	color: #f9f9f9;
 	background-color: #003087;
 	width: 25%;
@@ -222,7 +257,7 @@ Layout
 	padding: 100px 0px;
 	width: 75%;
 	background: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)),
-                rgba(0,0,0,0.30) url('../images/photo-section-travel.jpg') no-repeat center;
+                rgba(0,0,0,0.30) url('../images/video-section-gallery.jpg') no-repeat center;
 }
 
 /* travel */
@@ -230,7 +265,7 @@ Layout
 	margin-top: 0px;
 	height: 500px;
 	background: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)),
-                rgba(0,0,0,0.30) url('../images/photo-section-travel.jpg') no-repeat center;
+                rgba(0,0,0,0.30) url('../images/photo-section-travel.jpg') no-repeat center center;
 	background-position: center;
 	background-size: cover;
 	text-align: center;
@@ -271,6 +306,32 @@ Layout
 	width: 50%;
 }
 
+/* ----------------------------------------
+Modal Details
+------------------------------------------- */
+.modal-content {
+	padding: 40px 100px 40px 100px;
+	margin-left: 220px;
+	margin-right: 220px;
+	background-color: #f9f9f9;
+}
+
+.modal-background {
+  padding: 40px;
+  background-color: rgba(0, 0, 0, .8);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.modal-content h1 {
+	margin-top: 0px;
+}
 
 
 /* ----------------------------------------
@@ -461,7 +522,6 @@ Topbar
 
 .active {
 	transform: translateY(0);
-	display: block;
 }
 
 
