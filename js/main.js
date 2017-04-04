@@ -10,7 +10,8 @@ Event Dropdown
 	//removeClass active to topbar
 	//topbar background fades out
 
-$('.event-container').on('click', function () {
+$('.event').on('click', function (event) {
+	event.preventDefault();
  	$('.topbar-background').fadeIn(300);  
     $('.topbar-content').addClass('active');
 });
@@ -21,6 +22,8 @@ $('.close-button').on('click', function () {
     $('.topbar-content').removeClass('active');
 
 });
+
+
 
 // GABY - How do i stop the page from reloading when clicking on "event-container"?
 
@@ -45,8 +48,10 @@ $('.header-media').mouseenter(function(){
 $('.header-media').mouseleave(function(){
 	$('.header-media .header-description').fadeTo(0, 0);
 	$('.header-media .header-description').removeClass('active');
+	$('.header-description').attr('style', 'display: none !important');
 	$('.header-media .header-title').removeClass('title-up');
 	$('.header-media .header-category').removeClass('category-down');
+
 });
 
 
@@ -62,6 +67,7 @@ $('.header-style').mouseenter(function(){
 $('.header-style').mouseleave(function(){
 	$('.header-style .header-description').fadeTo(0, 0);
 	$('.header-style .header-description').removeClass('active');
+	$('.header-description').attr('style', 'display: none !important');
 	$('.header-style .header-title').removeClass('title-up');
 	$('.header-style .header-category').removeClass('category-down');
 });
@@ -79,6 +85,7 @@ $('.header-events').mouseenter(function(){
 $('.header-events').mouseleave(function(){
 	$('.header-events .header-description').fadeTo(0, 0);
 	$('.header-events .header-description').removeClass('active');
+	$('.header-description').attr('style', 'display: none !important');
 	$('.header-events .header-title').removeClass('title-up');
 	$('.header-events .header-category').removeClass('category-down');
 });
@@ -95,6 +102,7 @@ $('.header-travel').mouseenter(function(){
 $('.header-travel').mouseleave(function(){
 	$('.header-travel .header-description').fadeTo(0, 0);
 	$('.header-travel .header-description').removeClass('active');
+	$('.header-description').attr('style', 'display: none !important');
 	$('.header-travel .header-title').removeClass('title-up');
 	$('.header-travel .header-category').removeClass('category-down');
 });
